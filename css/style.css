@@ -30,11 +30,14 @@ h1, h2, h3 {
     margin: 10px auto;
 }
 
+section {
+    padding: 0 10px;
+}
+
 #wrapper {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 10px;
 }
 
 #top {
@@ -43,6 +46,11 @@ h1, h2, h3 {
     justify-content: space-between;
     padding: 20px 10px;
     min-height: 15vh;
+}
+
+#logo img {
+    max-width: 48px;
+    width: 100%;
 }
 
 #btn {
@@ -215,10 +223,6 @@ h1, h2, h3 {
     max-width: 550px;
 }
 
-.grow:nth-of-type(1) img {
-    max-width: 1023px;
-}
-
 .grow:nth-of-type(3) {
     background: url(/images/bg-section-top-desktop-2.svg), url(/images/bg-section-bottom-desktop-2.svg);
     background-repeat: no-repeat, no-repeat;
@@ -234,6 +238,7 @@ h1, h2, h3 {
     background: url(/images/bg-footer-top-desktop.svg) no-repeat top;
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 
 .footer_content {
@@ -242,7 +247,7 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-around;
     margin: 155px auto 0;
-    padding: 50px 0 10px;
+    padding: 50px 10px 10px;
     color: #fff;
 }
 
@@ -301,6 +306,7 @@ svg path:hover {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .input_holder {
@@ -308,9 +314,16 @@ svg path:hover {
     flex-direction: column;
 }
 
-.input_holder span {
-    font-size: 0.8rem;
+.error {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
     color: rgba(255, 97, 97, 1);
+}
+
+.success {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: rgb(0, 208, 255);
 }
 
 #input {
@@ -335,6 +348,7 @@ svg path:hover {
 .subscribe_btn {
     max-width: 105px;
     width: 100%;
+    margin-right: 10px;
 }
 
 .subscribe_btn button {
@@ -343,7 +357,7 @@ svg path:hover {
     background: rgba(245, 59, 87, 1.0);
     padding: 9px;
     font-size: 0.9rem;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -353,4 +367,64 @@ svg path:hover {
 
 .subscribe_btn button:hover {
     background: rgba(239, 87, 119, 1.0);
+}
+
+.show {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+    #header h1, #build_community h1 {
+        font-size: 2rem;
+    }
+    #coummunity {
+        justify-content: space-around;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .grow, #our_vision, #build_community {
+        margin: 0 auto !important;
+    }
+    .grow>div {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+    }
+    .grow:nth-of-type(2)>div {
+        flex-wrap: wrap-reverse;
+    }
+    .footer_content {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    .content {
+        margin: 0 auto !important;
+    }
+    #our_vision {
+        padding: 0;
+    }
+}
+
+@media (max-width: 781px) {
+    .newsletter {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 361px) {
+    .footer_content {
+        padding-bottom: 20px;
+        margin: 105px auto 0;
+    }
+    #coummunity {
+        margin-bottom: 0;
+    }
 }
