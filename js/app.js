@@ -25,3 +25,8 @@ $('#subBtn').click(function () {
         $('.success').show();
     }
 });
+
+$('.number').counterUp({
+    delay: 10,
+    time: 1000
+});
